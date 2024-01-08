@@ -1,0 +1,13 @@
+[package]
+name = "cranelift_aead"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[dependencies]
+chacha20poly1305 = { version = "0.10.1", features = [ "std" ] }
