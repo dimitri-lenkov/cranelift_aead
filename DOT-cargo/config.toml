@@ -1,0 +1,9 @@
+[unstable]
+codegen-backend = true
+
+[profile.test]
+codegen-backend = "cranelift"
+
+[profile.coverage]
+inherits = "test"
+codegen-backend = "llvm" # grcov requires llvm
